@@ -1,3 +1,4 @@
+@def prepath = "MixedModelsTutorial"
 @def author = "The Oracle"
 
 \newcommand{\R}{\mathbb R}
