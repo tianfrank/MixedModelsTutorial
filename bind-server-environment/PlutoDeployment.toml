@@ -1,4 +1,0 @@
-[SliderServer]
-exclude=[
-    "notebooks/basic_syntax.jl",
-]
