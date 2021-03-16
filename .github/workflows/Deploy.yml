@@ -31,7 +31,7 @@ jobs:
 
                   import PlutoUtils;
                   PlutoUtils.Export.github_action(; export_dir=".", baked_state=false, offer_binder=true,
-                    binder_url="https://mybinder.org/v2/gh/likanzhan/MixedModelsTutorial/3bd3021",
+                    binder_url="https://mybinder.org/v2/gh/likanzhan/MixedModelsTutorial/6a92269",
                     bind_server_url="https://computationalthinking-sliderserver-do.plutojl.org"); '
     # NOTE
     #   The steps below ensure that NodeJS and Franklin are loaded then it
