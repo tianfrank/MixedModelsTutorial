@@ -30,9 +30,7 @@ jobs:
           Pkg.instantiate();
 
           import PlutoUtils;
-          PlutoUtils.Export.github_action(; export_dir=".", baked_state=false, offer_binder=true,
-            binder_url="https://mybinder.org/v2/gh/likanzhan/MixedModelsTutorial/HEAD",
-            bind_server_url="https://likanzhan.github.io/MixedModelsTutorial"); '
+          PlutoUtils.Export.github_action(; export_dir=".", baked_state=false, offer_binder=false); '
     # - name: Instantiate Deploy Environment
     #   run: julia --project=pluto-depoly-environment -e 'using Pkg;Pkg.instantiate()'
     # - name: Print Env Status
