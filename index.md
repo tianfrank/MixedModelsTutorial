@@ -2,5 +2,5 @@
 @def hasmath = true
 @def hascode = true
 
-{{ plutonotebookpage ../notebooks/JuliaMM-Introduction.jl }}
+{{ plutonotebookpage ../notebooks/Julia-Introduction.jl }}
 

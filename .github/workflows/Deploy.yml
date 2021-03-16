@@ -24,15 +24,21 @@ jobs:
       uses: julia-actions/setup-julia@v1
       with:
         version: 1.5
-            - name: Run Pluto notebooks
-              run: julia --project=bind-server-environment -e '
-                  import Pkg;
-                  Pkg.instantiate();
+    - name: Run Pluto notebooks
+      run: julia --project=bind-server-environment -e '
+          import Pkg;
+          Pkg.instantiate();
 
-                  import PlutoUtils;
-                  PlutoUtils.Export.github_action(; export_dir=".", baked_state=false, offer_binder=true,
-                    binder_url="https://mybinder.org/v2/gh/likanzhan/MixedModelsTutorial/6a92269",
-                    bind_server_url="https://computationalthinking-sliderserver-do.plutojl.org"); '
+          import PlutoUtils;
+          PlutoUtils.Export.github_action(; export_dir=".", baked_state=false, offer_binder=true,
+            binder_url="https://mybinder.org/v2/gh/likanzhan/MixedModelsTutorial/HEAD",
+            bind_server_url="https://likanzhan.github.io/MixedModelsTutorial"); '
+    # - name: Instantiate Deploy Environment
+    #   run: julia --project=pluto-depoly-environment -e 'using Pkg;Pkg.instantiate()'
+    # - name: Print Env Status
+    #   run: julia --project=pluto-depoly-environment -e 'using Pkg;Pkg.status()'
+    # - name: Build Tutorials
+    #   run: julia --project=pluto-depoly-environment tutorials/make.jl
     # NOTE
     #   The steps below ensure that NodeJS and Franklin are loaded then it
     #   installs highlight.js which is needed for the prerendering step
